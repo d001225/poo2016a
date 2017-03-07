@@ -6,7 +6,7 @@
       <Compartment Name="Private" Collapsed="true" />
     </Compartments>
     <TypeIdentifier>
-      <HashCode>QAAAAAAAAAgAAAAAAAAAggAQAEIAAAAAAAAAAEEAAAA=</HashCode>
+      <HashCode>QAAAAAAgAAgAAAAAAAAAggAQAEIgAAAAAAAAAEEAAAA=</HashCode>
       <FileName>Aluno.cs</FileName>
     </TypeIdentifier>
     <ShowAsCollectionAssociation>
@@ -18,8 +18,14 @@
     <Compartments>
       <Compartment Name="Private" Collapsed="true" />
     </Compartments>
+    <AssociationLine Name="PlanoCurricular" Type="poo01.UnidadeCurricular" FixedFromPoint="true">
+      <Path>
+        <Point X="6.75" Y="2.824" />
+        <Point X="6.75" Y="4.25" />
+      </Path>
+    </AssociationLine>
     <TypeIdentifier>
-      <HashCode>AAAAAACAAAAAAIAAAAAAAAAAAAAgAAAAAAAAEAEAAAQ=</HashCode>
+      <HashCode>AAAAAACCBAAAAIAAAAAAAIABAAAgAAAAAAAAECEAAAY=</HashCode>
       <FileName>Curso.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -27,6 +33,7 @@
     </ShowAsAssociation>
     <ShowAsCollectionAssociation>
       <Property Name="AlunosMatriculados" />
+      <Property Name="PlanoCurricular" />
     </ShowAsCollectionAssociation>
   </Class>
   <Class Name="poo01.Matricula">
@@ -41,6 +48,16 @@
       <Property Name="Regime" />
     </ShowAsAssociation>
   </Class>
+  <Class Name="poo01.UnidadeCurricular">
+    <Position X="6" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAACAAAAAACAAAAAAAAAAIAAAAEAAAA=</HashCode>
+      <FileName>UnidadeCurricular.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Semestre" />
+    </ShowAsAssociation>
+  </Class>
   <Enum Name="poo01.TipoCurso">
     <Position X="8.75" Y="0.5" Width="1.5" />
     <TypeIdentifier>
@@ -49,10 +66,17 @@
     </TypeIdentifier>
   </Enum>
   <Enum Name="poo01.RegimeIngresso" Collapsed="true">
-    <Position X="1" Y="3.25" Width="1.5" />
+    <Position X="3.25" Y="3.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAABAAAAAAAAAAAAAEAAAAEgAAIAABAAAAAAAAAAAA=</HashCode>
       <FileName>Matricula.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="poo01.Semestre" Collapsed="true">
+    <Position X="8.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>UnidadeCurricular.cs</FileName>
     </TypeIdentifier>
   </Enum>
   <Font Name="Segoe UI" Size="9" />

@@ -34,6 +34,7 @@
     <Compile Include="Curso.cs" />
     <Compile Include="Matricula.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UnidadeCurricular.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
