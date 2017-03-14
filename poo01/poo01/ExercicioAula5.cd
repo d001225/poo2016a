@@ -1,14 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="poo01.Docente">
-    <Position X="0.75" Y="0.5" Width="1.5" />
-    <AssociationLine Name="Servico" Type="poo01.ServicoDocente">
-      <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
-        <Position X="0.618" Y="-0.263" Height="0.182" Width="0.868" />
-      </MemberNameLabel>
-    </AssociationLine>
+    <Position X="4.5" Y="3.5" Width="2.25" />
+    <Members>
+      <Method Name="CheckHoras" Hidden="true" />
+    </Members>
     <TypeIdentifier>
-      <HashCode>CAAAAAAAAAAAAAAABAAIAAAAAAAQAAAAAAAgACEAAAA=</HashCode>
+      <HashCode>CAAAAABAACAAAAAABAAIAAAAAAAQAAAAAAAgACEAAAA=</HashCode>
       <FileName>Docente.cs</FileName>
     </TypeIdentifier>
     <ShowAsCollectionAssociation>
@@ -16,24 +14,15 @@
     </ShowAsCollectionAssociation>
   </Class>
   <Class Name="poo01.ServicoDocente">
-    <Position X="3.75" Y="0.75" Width="1.5" />
-    <AssociationLine Name="Docente" Type="poo01.Docente" FixedFromPoint="true">
+    <Position X="0.75" Y="3.75" Width="1.5" />
+    <AssociationLine Name="Turma" Type="poo01.Turma" FixedFromPoint="true" FixedToPoint="true">
       <Path>
-        <Point X="3.75" Y="1.25" />
-        <Point X="2.25" Y="1.25" />
+        <Point X="1.812" Y="3.75" />
+        <Point X="1.812" Y="3.414" />
+        <Point X="2.75" Y="3.414" />
       </Path>
-      <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
-        <Position X="0.613" Y="0.066" Height="0.182" Width="0.797" />
-      </MemberNameLabel>
-    </AssociationLine>
-    <AssociationLine Name="Turma" Type="poo01.Turma">
-      <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
-        <Position X="-0.759" Y="0.173" Height="0.182" Width="0.648" />
-      </MemberNameLabel>
-    </AssociationLine>
-    <AssociationLine Name="Regime" Type="poo01.Regime">
       <MemberNameLabel ManuallyPlaced="true">
-        <Position X="0.509" Y="-0.237" />
+        <Position X="0.151" Y="0.074" />
       </MemberNameLabel>
     </AssociationLine>
     <TypeIdentifier>
@@ -48,17 +37,26 @@
     </ShowAsAssociation>
   </Class>
   <Class Name="poo01.Turma">
-    <Position X="3.75" Y="2.25" Width="1.5" />
-    <AssociationLine Name="UnidadeCurricular" Type="poo01.UnidadeCurricular" FixedToPoint="true">
+    <Position X="2.75" Y="1.25" Width="1.5" />
+    <AssociationLine Name="UnidadeCurricular" Type="poo01.UnidadeCurricular" FixedFromPoint="true" FixedToPoint="true">
       <Path>
-        <Point X="3.75" Y="3.688" />
-        <Point X="2" Y="3.688" />
+        <Point X="4.25" Y="2.812" />
+        <Point X="8.375" Y="2.812" />
+        <Point X="8.375" Y="3.75" />
       </Path>
     </AssociationLine>
-    <AssociationLine Name="AlunosInscritos" Type="poo01.Inscricao" FixedFromPoint="true">
+    <AssociationLine Name="TurmasAssociadas" Type="poo01.Turma" FixedFromPoint="true" FixedToPoint="true">
       <Path>
-        <Point X="5.25" Y="3.938" />
-        <Point X="6.75" Y="3.938" />
+        <Point X="2.875" Y="1.25" />
+        <Point X="2.875" Y="1" />
+        <Point X="4.062" Y="1" />
+        <Point X="4.062" Y="1.25" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="AlunosInscritos" Type="poo01.Aluno" FixedFromPoint="true">
+      <Path>
+        <Point X="4.25" Y="2" />
+        <Point X="7.25" Y="2" />
       </Path>
     </AssociationLine>
     <TypeIdentifier>
@@ -69,23 +67,14 @@
       <Property Name="UnidadeCurricular" />
     </ShowAsAssociation>
     <ShowAsCollectionAssociation>
-      <Property Name="AlunosInscritos" />
       <Property Name="TurmasAssociadas" />
+      <Property Name="AlunosInscritos" />
     </ShowAsCollectionAssociation>
   </Class>
   <Class Name="poo01.UnidadeCurricular" Collapsed="true">
-    <Position X="0.5" Y="3.5" Width="1.5" />
-    <AssociationLine Name="Turmas" Type="poo01.Turma" FixedFromPoint="true">
-      <Path>
-        <Point X="2" Y="3.875" />
-        <Point X="3.75" Y="3.875" />
-      </Path>
-      <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
-        <Position X="0.913" Y="-0.282" Height="0.182" Width="0.802" />
-      </MemberNameLabel>
-    </AssociationLine>
+    <Position X="8" Y="3.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAICAAAAAACAAAAAAAAAAIAAAAEAIAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAICAAACBACAAAACAAAAAIAAAAEAIIA=</HashCode>
       <FileName>UnidadeCurricular.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -95,54 +84,14 @@
       <Property Name="Turmas" />
     </ShowAsCollectionAssociation>
   </Class>
-  <Class Name="poo01.Inscricao">
-    <Position X="6.75" Y="3" Width="1.5" />
-    <AssociationLine Name="Aluno" Type="poo01.Aluno" FixedFromPoint="true" FixedToPoint="true">
-      <Path>
-        <Point X="7.062" Y="4.103" />
-        <Point X="7.062" Y="5.25" />
-        <Point X="5.75" Y="5.25" />
-      </Path>
-      <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
-        <Position X="1.399" Y="0.557" Height="0.182" Width="0.625" />
-      </MemberNameLabel>
-    </AssociationLine>
-    <AssociationLine Name="Turma" Type="poo01.Turma" FixedToPoint="true">
-      <Path>
-        <Point X="6.75" Y="3.191" />
-        <Point X="5.25" Y="3.191" />
-      </Path>
-      <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
-        <Position X="0.776" Y="0.076" Height="0.182" Width="0.7" />
-      </MemberNameLabel>
-    </AssociationLine>
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAIAAAAAAAAAAAIAAAAAAAAAAAABAAA=</HashCode>
-      <FileName>Inscricao.cs</FileName>
-    </TypeIdentifier>
-    <ShowAsAssociation>
-      <Property Name="Aluno" />
-      <Property Name="Turma" />
-    </ShowAsAssociation>
-  </Class>
   <Class Name="poo01.Aluno" Collapsed="true">
-    <Position X="4.25" Y="5" Width="1.5" />
+    <Position X="7.25" Y="1.5" Width="1.5" />
     <Members>
       <Method Name="Aluno" Hidden="true" />
       <Field Name="contacto" Hidden="true" />
       <Field Name="dataNascimento" Hidden="true" />
       <Method Name="ValidarDataNascimento" Hidden="true" />
     </Members>
-    <AssociationLine Name="Inscricoes" Type="poo01.Inscricao" FixedFromPoint="true" FixedToPoint="true">
-      <Path>
-        <Point X="5.75" Y="5.438" />
-        <Point X="8.125" Y="5.438" />
-        <Point X="8.125" Y="4.103" />
-      </Path>
-      <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
-        <Position X="1.283" Y="0.89" Height="0.182" Width="1.069" />
-      </MemberNameLabel>
-    </AssociationLine>
     <TypeIdentifier>
       <HashCode>QAAAAAAgAAgAAAAAAAAAggAQAEIgAAAAAAAAAEEAAAA=</HashCode>
       <FileName>Aluno.cs</FileName>
@@ -152,14 +101,14 @@
     </ShowAsCollectionAssociation>
   </Class>
   <Enum Name="poo01.RegimeLecionacao" Collapsed="true">
-    <Position X="6.5" Y="2.25" Width="1.75" />
+    <Position X="0.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAgAAAAAAAAAAABAAAAAAAAAAEIAAAAAAAAAAAA=</HashCode>
       <FileName>ServicoDocente.cs</FileName>
     </TypeIdentifier>
   </Enum>
   <Enum Name="poo01.Regime">
-    <Position X="6.5" Y="0.5" Width="1.5" />
+    <Position X="0.5" Y="1.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAgAAAAAAAAAAABAAAAAAAAAAEoAAAAAAAAAAAA=</HashCode>
       <FileName>ServicoDocente.cs</FileName>

@@ -6,8 +6,8 @@ namespace poo01 {
       public UnidadeCurricular UnidadeCurricular { get; set; }
       private char letra;
       public char Letra { get { return letra; } set { letra = char.ToUpper(letra); } }
-      public ICollection<Inscricao> AlunosInscritos 
-         { get; private set; } = new List<Inscricao>();
+      public ICollection<Aluno> AlunosInscritos 
+         { get; private set; } = new List<Aluno>();
       public ICollection<Turma> TurmasAssociadas 
          { get; private set; } = new List<Turma>();
       public ICollection<ServicoDocente> Servico 

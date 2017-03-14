@@ -63,12 +63,16 @@ namespace poo01 {
       /// 2017-03-07 -> Inscrições do Aluno
       ///NOVO CONCEITO: Dicionário!
       ///2017-03-14 -> Passou a ser um conjunto de "Inscricao"
-      public ICollection<Inscricao> Inscricoes { get; private set; }
+      public ICollection<Turma> Inscricoes { get; private set; }
 
       ///INTERNAL -> Controlado, acesso apenas ao código nos ficheiros deste Assembly (Projeto)
       internal void Inscrever(ushort anoLetivo, params UnidadeCurricular[] ucs) {
-         if(Inscricoes == null) Inscricoes = new List<Inscricao>();
-         ///TODO: Ver as Turmas, e "inscrever" o aluno para cada UC
+         if(Inscricoes == null) Inscricoes = new List<Turma>();
+         foreach(var uc in ucs) {
+            var turma = uc.GetTurmaLivre(anoLetivo);
+            Inscricoes.Add(turma);
+            turma.AlunosInscritos.Add(this);
+         }
       }
    }
 }
