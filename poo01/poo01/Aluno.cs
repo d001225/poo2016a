@@ -62,16 +62,13 @@ namespace poo01 {
       
       /// 2017-03-07 -> Inscrições do Aluno
       ///NOVO CONCEITO: Dicionário!
-      public IDictionary<string, List<UnidadeCurricular>> Inscricoes { get; private set; }
+      ///2017-03-14 -> Passou a ser um conjunto de "Inscricao"
+      public ICollection<Inscricao> Inscricoes { get; private set; }
 
       ///INTERNAL -> Controlado, acesso apenas ao código nos ficheiros deste Assembly (Projeto)
-      internal void Inscrever(uint anoLetivo, params UnidadeCurricular[] ucs) {
-         if(Inscricoes == null)
-            Inscricoes = new Dictionary<string, List<UnidadeCurricular>>();
-         string anoLec = $"{anoLetivo}/{anoLetivo + 1}";
-         if (!Inscricoes.ContainsKey(anoLec))
-            Inscricoes.Add(anoLec, new List<UnidadeCurricular>());
-         Inscricoes[anoLec].AddRange(ucs);
+      internal void Inscrever(ushort anoLetivo, params UnidadeCurricular[] ucs) {
+         if(Inscricoes == null) Inscricoes = new List<Inscricao>();
+         ///TODO: Ver as Turmas, e "inscrever" o aluno para cada UC
       }
    }
 }

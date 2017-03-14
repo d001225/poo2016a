@@ -34,7 +34,7 @@ namespace poo01 {
 
       public ICollection<Aluno> AlunosMatriculados { get; set; }
 
-      public void MatricularAluno(Aluno aluno, uint anoInicio, RegimeIngresso regime) {
+      public void MatricularAluno(Aluno aluno, ushort anoInicio, RegimeIngresso regime) {
          Matricula m = new Matricula {
             Aluno = aluno,
             Curso = this,
@@ -88,7 +88,7 @@ namespace poo01 {
 
       /// 2017-mar-07 -> Inscrição Automática no Ato de Matrícula
       ///             -> Inscrição Automática num dado Ano
-      public void InscreverAlunoAno(Aluno aluno, uint anoLetivo, byte anoCurricular) {
+      public void InscreverAlunoAno(Aluno aluno, ushort anoLetivo, byte anoCurricular) {
          if (!AlunosMatriculados.Contains(aluno))
             throw new Exception(); //Aluno não está matriculado neste curso!
 
