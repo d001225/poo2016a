@@ -9,5 +9,11 @@ namespace poo01 {
       public string Nome { get { return $"{PrimeiroNome} {Apelido}"; } }
       public ICollection<ServicoDocente> Servico 
          { get; private set; } = new List<ServicoDocente>();
+
+      public byte GetHorasLetivas(ushort anoLetivo) {
+         byte ret = 0;
+         foreach (var sd in Servico) ret += sd.HorasLetivas;
+         return ret;
+      }
    }
 }
