@@ -8,14 +8,6 @@ namespace poo01 {
       public byte AnoCurricular { get; set; }
       public Semestre Semestre { get; set; }
       public ICollection<Turma> Turmas { get; set; }
-
-      public Docente Docente {
-         get {
-            throw new System.NotImplementedException();
-         }
-
-         set {
-         }
-      }
+      public Docente Docente { get; set; }
    }
 }

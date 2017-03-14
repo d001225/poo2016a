@@ -22,8 +22,8 @@
         <Point X="3.75" Y="1.25" />
         <Point X="2.25" Y="1.25" />
       </Path>
-      <MemberNameLabel ManuallyPlaced="true">
-        <Position X="0.976" Y="0.052" />
+      <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
+        <Position X="0.613" Y="0.066" Height="0.182" Width="0.797" />
       </MemberNameLabel>
     </AssociationLine>
     <AssociationLine Name="Turma" Type="poo01.Turma">

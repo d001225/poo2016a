@@ -1,16 +1,16 @@
 ﻿namespace poo01 {
    public enum RegimeLecionacao {
       TeoricoPratica = 1,
-      PraticaLaboratorial = 2,
-      Teorica = 3,
-      Projeto = 4,
+      PraticaLaboratorial,
+      Teorica,
+      Projeto,
    }
    public enum Regime {
-      TeoricoPratica = 1,
-      PraticaLaboratorial = 2,
-      Teorica = 3,
-      Projeto = 4,
       Outro = 0,
+      TeoricoPratica,
+      PraticaLaboratorial,
+      Teorica,
+      Projeto,
    }
    public class ServicoDocente {
       public Docente Docente { get; set; }
